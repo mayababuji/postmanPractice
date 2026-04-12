@@ -173,6 +173,24 @@
 				}
 			],
 			"id": "8ef7ee9f-d6dd-4d0a-a6f4-b6a7ec0a8161"
+		},
+		{
+			"name": "GetBookWithFilter",
+			"item": [
+				{
+					"name": "GetNonFictionBooks",
+					"id": "74956809-4803-44b6-97f3-734d80453f7c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "f628edd4-930d-437e-8a63-95007c2752b1"
 		}
 	],
 	"variable": [
