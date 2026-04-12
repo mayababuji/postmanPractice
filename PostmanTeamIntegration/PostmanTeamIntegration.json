@@ -256,6 +256,37 @@
 			"item": [
 				{
 					"name": "Get Status",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4d36aa14-37f5-40f3-a6e2-426febdff84b",
+								"exec": [
+									"pm.test(\"Status code is 200\"),()=>{",
+									"pm.response.to.have.status(200);",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "e532097e-0153-4903-8d2c-1ee39263ad51",
+								"exec": [
+									"const requestType = pm.iterationData.get(\"requestType\");",
+									"if(requestType!==\"getFiltered\"){",
+									"    pm.execution.skipRequest();",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "9991ebe1-b1ab-4e05-830a-418e5199ae9a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
