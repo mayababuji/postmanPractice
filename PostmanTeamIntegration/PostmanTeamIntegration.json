@@ -174,7 +174,7 @@
 								"exec": [
 									"console.log('bookId from csv is :', pm.iterationData.get('bookId'));",
 									"console.log('customerNamerom csv is :', pm.iterationData.get('customerName'));",
-									"console.log(\"access_token is :\"+ pm.collectionVariables(\"access_token\"));",
+									"console.log(\"access_token is :\", pm.collectionVariables(\"access_token\"));",
 									"console.log('URL:', pm.request.url.toString());"
 								],
 								"type": "text/javascript",
@@ -223,10 +223,14 @@
 							"script": {
 								"id": "9baf3381-179c-4318-bfcc-4f5d613df1ee",
 								"exec": [
-									"// const requestType = pm.iterationData.get(\"requestType\");",
-									"// if(requestType!==\"updateOrder\"){",
-									"//     pm.execution.skipRequest();",
-									"// }"
+									"console.log('bookId from csv is :', pm.iterationData.get('bookId'));",
+									"console.log('customerNamerom csv is :', pm.iterationData.get('customerName'));",
+									"console.log(\"access_token is :\", pm.collectionVariables(\"access_token\"));",
+									"",
+									"const requestType = pm.iterationData.get(\"requestType\");",
+									"if(requestType!==\"updateOrder\"){",
+									"    pm.execution.skipRequest();",
+									"}"
 								],
 								"type": "text/javascript",
 								"packages": {},
