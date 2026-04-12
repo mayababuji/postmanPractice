@@ -94,8 +94,11 @@
 							"script": {
 								"id": "2aed7dc6-b5a5-43d1-b7b0-4386f985caf4",
 								"exec": [
+									"console.log(\"Books:\", pm.response.json());",
 									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);})"
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
 								],
 								"type": "text/javascript",
 								"packages": {},
