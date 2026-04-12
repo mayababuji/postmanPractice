@@ -222,10 +222,10 @@
 							"script": {
 								"id": "9baf3381-179c-4318-bfcc-4f5d613df1ee",
 								"exec": [
-									"const requestType = pm.iterationData.get(\"requestType\");",
-									"if(requestType!==\"updateOrder\"){",
-									"    pm.execution.skipRequest();",
-									"}"
+									"// const requestType = pm.iterationData.get(\"requestType\");",
+									"// if(requestType!==\"updateOrder\"){",
+									"//     pm.execution.skipRequest();",
+									"// }"
 								],
 								"type": "text/javascript",
 								"packages": {},
