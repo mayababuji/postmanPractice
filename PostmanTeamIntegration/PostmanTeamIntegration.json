@@ -216,11 +216,47 @@
 			"item": [
 				{
 					"name": "Update Order",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "9baf3381-179c-4318-bfcc-4f5d613df1ee",
+								"exec": [
+									"const requestType = pm.iterationData.get(\"requestType\");",
+									"if(requestType!==\"updateOrder\"){",
+									"    pm.execution.skipRequest();",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "35a9f2f6-2010-4247-9088-23cbf220d92c",
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {",
+									"    pm.response.to.have.status(204);})"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "bdd967d0-50ea-49ee-a6dc-3ca4a05899c8",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{access_token}}"
+							}
+						},
 						"method": "GET",
 						"header": [],
 						"body": {
