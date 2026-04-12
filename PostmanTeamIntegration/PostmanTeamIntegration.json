@@ -212,6 +212,24 @@
 			"id": "be5d8cec-273b-46ba-bd97-0087869fe980"
 		},
 		{
+			"name": "Update Order",
+			"item": [
+				{
+					"name": "New Request",
+					"id": "bdd967d0-50ea-49ee-a6dc-3ca4a05899c8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "f4b983c0-2b8a-4dfe-9916-28a20cdd0d26"
+		},
+		{
 			"name": "Delete Orders",
 			"item": [
 				{
