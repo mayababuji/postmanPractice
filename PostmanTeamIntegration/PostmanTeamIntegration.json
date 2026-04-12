@@ -262,7 +262,7 @@
 								"token": "{{access_token}}"
 							}
 						},
-						"method": "POST",
+						"method": "PATCH",
 						"header": [],
 						"body": {
 							"mode": "raw",
