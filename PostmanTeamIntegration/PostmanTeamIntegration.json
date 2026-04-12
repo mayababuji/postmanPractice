@@ -215,14 +215,24 @@
 			"name": "Update Order",
 			"item": [
 				{
-					"name": "New Request",
+					"name": "Update Order",
 					"id": "bdd967d0-50ea-49ee-a6dc-3ca4a05899c8",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"customerName\":\"{{customerName}}\"}\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://simple-books-api.click/orders/{{orderId}}"
 					},
 					"response": []
 				}
