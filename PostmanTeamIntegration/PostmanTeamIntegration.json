@@ -135,6 +135,79 @@
 			"id": "be5d8cec-273b-46ba-bd97-0087869fe980"
 		},
 		{
+			"name": "GetBookWithFilter",
+			"item": [
+				{
+					"name": "GetNonFictionBooks",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "70397ae6-f577-4f96-a36c-3b3175eab8ac",
+								"exec": [
+									"const requestType = pm.iterationData.get('requestType');",
+									"if(requestType!=\"getFiltered\"){",
+									"    pm.execution.skipRequest();",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "2aed7dc6-b5a5-43d1-b7b0-4386f985caf4",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);})"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"id": "74956809-4803-44b6-97f3-734d80453f7c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://simple-books-api.glitch.me/books?type=non-fiction&limit=20",
+							"protocol": "https",
+							"host": [
+								"simple-books-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"books"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "non-fiction"
+								},
+								{
+									"key": "limit",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "f628edd4-930d-437e-8a63-95007c2752b1"
+		},
+		{
 			"name": "Delete Orders",
 			"item": [
 				{
@@ -173,24 +246,6 @@
 				}
 			],
 			"id": "8ef7ee9f-d6dd-4d0a-a6f4-b6a7ec0a8161"
-		},
-		{
-			"name": "GetBookWithFilter",
-			"item": [
-				{
-					"name": "GetNonFictionBooks",
-					"id": "74956809-4803-44b6-97f3-734d80453f7c",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
-				}
-			],
-			"id": "f628edd4-930d-437e-8a63-95007c2752b1"
 		}
 	],
 	"variable": [
