@@ -261,7 +261,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"customerName\":\"{{customerName}}\"}\n\n",
+							"raw": "\n\n{\n  \"customerName\": \"{{customerName}}\"\n}\n\n",
 							"options": {
 								"raw": {
 									"language": "json"
