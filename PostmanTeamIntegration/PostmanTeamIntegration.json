@@ -79,10 +79,11 @@
 							"script": {
 								"id": "70397ae6-f577-4f96-a36c-3b3175eab8ac",
 								"exec": [
-									"// const requestType = pm.iterationData.get('requestType');",
-									"// if(requestType!=\"getFiltered\"){",
-									"//     pm.execution.skipRequest();",
-									"// }"
+									"const requestType = pm.iterationData.get('requestType') || \"\";",
+									"if (requestType.trim() !== \"getFiltered\") {",
+									"    pm.execution.skipRequest();",
+									"}",
+									""
 								],
 								"type": "text/javascript",
 								"packages": {},
@@ -249,6 +250,25 @@
 				}
 			],
 			"id": "8ef7ee9f-d6dd-4d0a-a6f4-b6a7ec0a8161"
+		},
+		{
+			"name": "Get Status",
+			"item": [
+				{
+					"name": "Get Status",
+					"id": "9991ebe1-b1ab-4e05-830a-418e5199ae9a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://simple-books-api.glitch.me/status"
+					},
+					"response": []
+				}
+			],
+			"id": "fbee7679-c4e3-443f-bc07-4656d34a316f"
 		}
 	],
 	"variable": [
