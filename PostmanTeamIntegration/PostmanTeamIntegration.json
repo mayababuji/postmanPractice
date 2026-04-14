@@ -211,18 +211,6 @@
 						"description": "GET SINGLE ORDER WAS NOT WORKING\n\nPath where all the relevant files are : /Users/maya/Documents/Maya Numpy Ninja/Udemy APILearning/Pavan/SimpleBookDataDriven\n\n\\# command to run newman and generate newman reoprt\n\n**newman run BookApiDataDriven.postman_collection.json -d OrderCreation.json -r htmlextra**\n\n#command to run without generating newman report\n\n**newman run BookApiDataDriven.postman_collection.json -d OrderCreation.json**\n\n#command to run with .csv file as data driven\n\n**newman run BookApiDataDriven.postman_collection.json -d OrderCreation.csv**"
 					},
 					"response": []
-				},
-				{
-					"name": "Neagtive test create order",
-					"id": "86df87c8-5e9c-4082-a9ec-8472cec31963",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
 				}
 			],
 			"id": "be5d8cec-273b-46ba-bd97-0087869fe980"
